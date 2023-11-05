@@ -1,6 +1,8 @@
 body {
     display: flex;
-
+    
+    font-family: 'Roboto', sans-serif;
+    
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -8,10 +10,10 @@ body {
 }
 
 .bg-container {
+    transition: background-color 1s ease;
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url('Untitled\ design\(1\).svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -25,9 +27,10 @@ body {
 }
 
 .circle-btn {
+    color: #FFF;
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     cursor: pointer;
     opacity: 0; 
     transition: transform 0.3s, opacity 0.3s;
@@ -60,3 +63,31 @@ body {
     color: black;
     text-align: center;
 }
+
+.site-header {
+    background-color: #FFF;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+.logo {
+    height: 60px; /* Adjust as needed */
+    margin-right: 15px;
+}
+
+.company-name {
+    font-size: 24px; /* Adjust as needed */
+    color: #333; /* Modern websites often use dark gray instead of pure black */
+}
+
+

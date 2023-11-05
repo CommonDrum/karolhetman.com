@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const numButtons = buttons.length;
     const centerX = containerSize / 2;
     const centerY = containerSize / 2;
-    const radius = 200;
+    const radius = 250;
     let angle = -11;
     const angleStep = (2 * Math.PI) / numButtons;
 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Add initial animation
         setTimeout(() => {
             button.classList.add('visible');
-        }, i * 200);
+        }, i * 450);
 
         // Display button name and change background color on hover
         button.addEventListener('mouseover', () => {
@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             button.classList.add('hovered');
             displayName.innerText = button.getAttribute('data-name');
             bgContainer.style.backgroundColor = color; // Change the background color
+            bgContainer.style.backgroundImage = url();
         });
 
         // Reset when mouseout
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             displayName.innerText = '';
             bgContainer.style.backgroundColor = ""; // Reset the background color
         });
-        
+
         button.addEventListener('click', () => {
             const url = button.getAttribute('data-url'); // Get the URL from data-url attribute
             if (url) {
